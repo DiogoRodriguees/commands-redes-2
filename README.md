@@ -23,10 +23,15 @@
 
   # mostra configuração de rotas
   $ do show ip route
+
+  # configura rota padrao
+  $ route 0.0.0.0 0.0.0.0 <ip_rede> <mask>
 ```
+
 ### RIP config
 ```bash
   # abre arquivo de configuração com o editor nano
+  # dever alterar a variavel ripd=no para ripd=yes
   $ nano /etc/frr/daemons
 
   # inicia servidor frr
