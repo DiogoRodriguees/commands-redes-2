@@ -26,6 +26,9 @@
 
   # configura rota padrao
   $ route 0.0.0.0 0.0.0.0 <ip_rede> <mask>
+
+  # propaga pela rede o roteador padrão(verficar escrita)
+  $ difinitin-information originate
 ```
 
 ### RIP config
