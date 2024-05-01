@@ -70,4 +70,7 @@
 
   # configura rota padrao (EX: route add default gw 192.168.122.1 255.255.255.0)
   $ route add default gw <ip> <mascara>
+
+  # save configs
+  $ copy running-config startup-config
 ```
