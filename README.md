@@ -1,5 +1,21 @@
 # Commands to config networks
 
+## Host Linux
+``` bash
+  # configura um ip para a interface especificada (EX: ifconfig eth0 192.168.122.1 255.255.255.0)
+  $ ifconfig <interface> <ip> netmask <mascara>
+  ou $ ifconfig <interface> <ip>/<>/cidr
+
+  # configura rota padrao (EX: route add default gw 192.168.122.1 255.255.255.0)
+  $ route add default gw <ip> <mascara>
+
+  # save configs
+  $ copy running-config startup-config
+
+  #
+  $ 
+```
+
 ## Router Cisco
 ### Basic commands
 ```bash
@@ -10,13 +26,13 @@
   $ configure terminal
 
   # especifica a interface que vai receber o endereço ip do proximo commando (EX: interface g0/0)
-  $ interface <interface>
+  (config) $ interface <interface>
 
   # adciona um ip com uma determinada mascara (Ex: ip address 192.168.122.1 255.255.255.0)
-  $ ip address <ip> <mascara>
+  (config-interface)$ ip address <ip> <mascara>
 
   # reinicia a interface de rede
-  $ no shutdown
+  (config-interface) $ no shutdown
 
   # mostra configurações de interface
   $ do show ip interface brief
@@ -25,7 +41,7 @@
   $ do show ip route
 
   # configura rota padrao
-  $ route 0.0.0.0 0.0.0.0 <ip_rede> <mask>
+  (config) $ route 0.0.0.0 0.0.0.0 <ip_rede> <mask>
 
   # propaga pela rede o roteador padrão(verficar escrita)
   $ difinitin-information originate
