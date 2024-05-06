@@ -12,8 +12,6 @@
   # save configs
   $ copy running-config startup-config
 
-  #
-  $ 
 ```
 
 ## Router Cisco
